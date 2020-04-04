@@ -9,7 +9,7 @@ import {
 } from './../constants/weathers';
 
 const getTemp = kelvin =>{
-    return convert(kelvin).from("K").to("C").toFixed(2);
+    return convert(kelvin).from("K").to("C").toFixed(0);
 }
 
 const getWeatherState = weather => {
@@ -41,6 +41,7 @@ const transformWeather = weather_data => {
         weatherState,
         wind: `${speed} m/s`,
     }
+    console.log(data);
     return data;
 }
 
